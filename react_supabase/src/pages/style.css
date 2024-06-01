@@ -1,0 +1,310 @@
+/* Signin.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+  }
+  .homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 90%; /* Full width on small screens */
+    max-width: 400px; /* Limit width on larger screens */
+  }
+  
+  .heading {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: #007BFF;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    .form {
+      width: 60%; /* 60% of the viewport width on larger screens */
+      max-width: 500px; /* Maximum width */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .form {
+      width: 40%; /* 40% of the viewport width on even larger screens */
+      max-width: 600px; /* Maximum width */
+    }
+  }
+  .footer-text {
+    margin-top: 20px;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .footer-text a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+  /* General Styling */
+.homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #f8f9fa;
+  }
+  .homepage h1{
+    font-size: 2rem;
+  }
+  
+  .table-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .edit-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Modal Styling */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slide-in 0.5s ease;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .modal-content p {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+  
+  .modal-content .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-buttons .confirm-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .modal-buttons .cancel-button {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .modal-buttons button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .homepage h1{
+        font-size: 1.4rem;
+      }
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    table {
+      width: 100%;
+    }
+  
+    th, td {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .homepage h1{
+        font-size: 0.8rem;
+      }
+    .button {
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
+  .modal-content h2 {
+    margin-top: 0;
+  }
+  
+  .modal-content form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  .modal-content form input {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .modal-content form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-content form button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+    }
+  
+    table {
+      width: 100%;
+    }
+  
+    th, td {
+      padding: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .button {
+      padding: 5px;
+      font-size: 14px;
+    }
+  }
+  
