@@ -76,6 +76,12 @@ const Homepage = () => {
 
   useEffect(() => {
     getUsers();
+    const intervalId = setInterval(() => {
+      getUsers();
+    }, 60000); // Refresh every 60 seconds
+
+    // Cleanup function to clear the interval when the component unmounts
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
